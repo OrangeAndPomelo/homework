@@ -9,30 +9,30 @@
  */
 
 // 第一种字符串反转
-// var isPalindrome = function(x) {
-//     // 特殊数值先处理
-//     if (x === 0) return true;
-//     if (x < 0 || x % 10 === 0) return false;
+var isPalindrome = function(x) {
+    // 特殊数值先处理
+    if (x === 0) return true;
+    if (x < 0 || x % 10 === 0) return false;
 
-//     const originalSplitArray = x.toString().split("");
+    const originalSplitArray = x.toString().split("");
 
-//     const splitArray = x.toString().split("");
+    const splitArray = x.toString().split("");
 
-//     console.log('splitArray', splitArray);
+    console.log('splitArray', splitArray);
 
-//     const reverseString = splitArray.reverse().join("");
+    const reverseString = splitArray.reverse().join("");
 
-//     const splitString = originalSplitArray.join("");
+    const splitString = originalSplitArray.join("");
 
-//     console.log('splitString', splitString);
-//     console.log('reverseString', reverseString);
+    console.log('splitString', splitString);
+    console.log('reverseString', reverseString);
 
-//     if (splitString === reverseString) {
-//         return true;
-//     } else {
-//         return false;
-//     }
-// };
+    if (splitString === reverseString) {
+        return true;
+    } else {
+        return false;
+    }
+};
 
 // 反推算值
 var isPalindrome = function(x) {

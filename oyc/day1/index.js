@@ -41,4 +41,4 @@ function test() {
     console.log('count');
 }
 
-mySetInterVal(() => { console.log('count'); }, 1000, 2000)
+mySetInterVal(() => { console.log('count', new Date()) }, 1000, 2000)
