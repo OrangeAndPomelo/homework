@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function foo(arg) {
+        this.a = arg;
+        return this
+    };
+
+    var a = foo(1);
+    var b = foo(10);
+
+    console.log(a.a); //this指向全局，实际上这里等价于 window.a = window,函数里this.a = window.a,但是window.a未定义，所以返回undefined
+    console.log(b.a); //这里经过第一步声明了a，所以foo函数内window.a  = this.a = = 10;
+</script>
+
+</html>
