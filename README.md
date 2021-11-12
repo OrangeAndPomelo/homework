@@ -28,18 +28,20 @@ console.log(sum(2)(3)); // Outputs 5
 
 1. 介绍下 javascript 里的 this
 
-2. 请写出以下输出结果：
+2. [请写出以下输出结果](https://segmentfault.com/a/1190000011194676)
+
+第一题
 
 ```javascript
 
 function Foo() {
-    getName = function () { alert (1); };
+    getName = function () { console.log('1'); };
     return this;
 }
-Foo.getName = function () { alert (2);};
-Foo.prototype.getName = function () { alert (3);};
-var getName = function () { alert (4);};
-function getName() { alert (5);}
+Foo.getName = function () { console.log('2');};
+Foo.prototype.getName = function () { console.log('3');};
+var getName = function () { console.log('4');};
+function getName() { console.log('5');}
 
 //请写出以下输出结果：
 Foo.getName();
@@ -49,5 +51,61 @@ getName();
 new Foo.getName();
 new Foo().getName();
 new new Foo().getName();
+
+```
+
+第二题
+
+```javascript
+
+var = 10;
+var obj = {
+    x: 20,
+    f: function(){
+        console.log(this.x);
+        var foo = function(){
+            console.log(this.x);
+            }
+        foo();
+    }
+};
+obj.f();
+
+```
+
+第三题
+
+```javascript
+
+function foo(arg){
+    this.a = arg;
+    return this
+};
+
+var a = foo(1);
+var b = foo(10);
+
+console.log(a.a);
+console.log(b.a);
+
+```
+
+第四题
+
+```javascript
+
+var x = 10;
+var obj = {
+    x: 20,
+    f: function(){ console.log(this.x); }
+};
+var bar = obj.f;
+var obj2 = {
+    x: 30,
+    f: obj.f
+}
+obj.f();
+bar();
+obj2.f();
 
 ```
