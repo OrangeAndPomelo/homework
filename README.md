@@ -109,3 +109,17 @@ bar();
 obj2.f();
 
 ```
+
+## Day 5
+
+1. 如何改变this指向
+
+2. [按要求实现 go 函数](https://github.com/lgwebdream/FE-Interview/issues/1058)
+
+```javascript
+// 示例
+go("l"); //gol
+go()("l"); //gool
+go()()()("l"); //返回gooool
+
+```
