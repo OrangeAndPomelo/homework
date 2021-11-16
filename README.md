@@ -123,3 +123,9 @@ go()("l"); //gool
 go()()()("l"); //返回gooool
 
 ```
+
+## Day 6
+
+1. 介绍下call,apply,bind
+
+2. 重新实现call,apply,bind
