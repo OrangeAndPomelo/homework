@@ -110,7 +110,7 @@ obj2.f();
 
 ```
 
-## Day 5
+## Day5
 
 1. 如何改变this指向
 
@@ -124,8 +124,14 @@ go()()()("l"); //返回gooool
 
 ```
 
-## Day 6
+## Day6
 
 1. 介绍下call,apply,bind
 
 2. 重新实现call,apply,bind
+
+## Day7
+
+1. 介绍下js的原型
+
+2. 重新实现一个new
