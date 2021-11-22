@@ -138,6 +138,13 @@ go()()()("l"); //返回gooool
 2. 重新实现一个new
 
 ## Day8
+
 1. 谈一下Promise
 
 2. [Promise面试题](https://jishuin.proginn.com/p/763bfbd2a6b2)
+
+## Day9
+
+1. 介绍下js中的深拷贝，浅拷贝
+
+2. 实现深拷贝，浅拷贝
