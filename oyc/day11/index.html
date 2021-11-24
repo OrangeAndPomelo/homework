@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1">
+    <title>debounce</title>
+    <style>
+        #container {
+            width: 100%;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            color: #fff;
+            background-color: #444;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container"></div>
+    <script>
+        //immediate设置为第一次是立马触发的，不用等2s后再触发
+        function debounce(fn, delay, immediate = false) {
+            // 通过闭包保存timer
+            let timer, result;
+            return (...args) => {
+                //获取函数参数
+                const param = [...args];
+                // 清除定时器，保证在触发时间内，定时器重置
+                if (timer) clearTimeout(timer);
+                //立马执行
+                if (immediate) {
+                    let callNow = !timer;
+                    timer = setTimeout(() => {
+                        timer = null;
+                    }, delay);
+                    if (callNow) fn.apply(this, args);
+                } else {
+                    timer = setTimeout(() => {
+                        // 执行并改变this,通过两个箭头函数使这里的this指向的debounce里的this
+                        fn.apply(this, param);
+                    }, delay);
+                }
+            }
+        }
+
+        function throttle(fn, delay) {
+            let timer;
+            return (...args) => {
+                let params = [...args];
+                // 里面设置timer确保这这段时间内只能执行一次
+                if (!timer) {
+                    timer = setTimeout(() => {
+                        fn.apply(this, params);
+                        timer = null;
+                    }, delay)
+                }
+            }
+        }
+
+        let count = 1;
+        let container = document.getElementById('container');
+
+        function getUserAction(e) {
+            console.log(e);
+            container.innerHTML = count++;
+        };
+
+        // container.onmousemove = debounce(getUserAction, 2000, false);
+        container.onmousemove = throttle(getUserAction, 4000);
+    </script>
+</body>
+
+</html>
