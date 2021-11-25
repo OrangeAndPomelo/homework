@@ -27,7 +27,7 @@ MVVM，全称是 Model-View-ViewModel。是一种简化用户界面的事件驱�
 
 #### 脏值检测
 
-AngularJS采用的是**脏值检测(dirty check)**的方法，对所有的数据与视图的绑定关系做检测，识别是否有数据发生变更来决定是否需要更新视图。angular只有在指定的事件触发时进入脏值检测，大致如下：
+AngularJS采用的是 **脏值检测(dirty check)** 的方法，对所有的数据与视图的绑定关系做检测，识别是否有数据发生变更来决定是否需要更新视图。angular只有在指定的事件触发时进入脏值检测，大致如下：
 
 - DOM事件，譬如用户输入文本，点击按钮等。( `ng-click` )
 
@@ -54,4 +54,4 @@ Vue3通过Proxy实现对目标对象的拦截代理，本质也是数据劫持�
 
 1.  [前端三大框架:数据绑定与数据流](https://segmentfault.com/a/1190000039253156)
 2. [Vue MVVM理解及原理实现](https://juejin.cn/post/6844903929298288647)
-3. [浅谈vue,angular,react数据双向绑定原理分析](
+3. [浅谈vue,angular,react数据双向绑定原理分析](https://www.yisu.com/zixun/184099.html)
