@@ -207,3 +207,49 @@ console.log("H");
 1. 说下你对Vue生命周期的理解
 
 2. 父子组件挂载时，生命周期的顺序是咋样的
+
+## Day14
+
+1. 说下Vue的双向数据绑定
+
+2. 实现响应式函数
+
+```js
+// 实现一个响应式函数，对一个对象内的所有key添加响应式特性
+const reactive = (obj) => {
+
+}
+
+const data = {
+  a: 1,
+  b: 2,
+  c: {
+    c1: {
+      af: 999
+    },
+    c2: 4
+  }
+}
+
+reactive(data);
+data.a = 5; //Set key=a val=5
+data.b = 7; //Set key=b val=7
+data.c.c2 = 4; //
+data.c.c1.af = 121; //Set key=af val=121
+
+```
+3. vue中对于数组类型是怎么处理的，简单模拟下对数组方法的监听
+
+```javascript
+//vue中对于数组类型是怎么处理的，简单模拟下对数组方法的监听
+const reactive = (obj) => {
+
+}
+const data = [1,2,3,4];
+reactive(data);
+data.push(5); //Action=push ,args = 5
+data.splice(0, 2) //Action=splice,args=0,2
+
+```
+
+
