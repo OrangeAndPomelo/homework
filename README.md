@@ -252,4 +252,9 @@ data.splice(0, 2) //Action=splice,args=0,2
 
 ```
 
+## Day15
+
+1. vue3实现响应式为什么要使用proxy替换Object.defineProperty？Proxy对比Object.defineProperty有啥优缺点？
+
+2. 怎么通过Proxy实现响应式？
 
