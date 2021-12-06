@@ -258,3 +258,9 @@ data.splice(0, 2) //Action=splice,args=0,2
 
 2. 怎么通过Proxy实现响应式？
 
+
+## Day16
+
+1. vue组件之间是怎么通信的
+
+
