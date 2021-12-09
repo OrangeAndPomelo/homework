@@ -266,4 +266,7 @@ data.splice(0, 2) //Action=splice,args=0,2
 ## Day17
 
 1. 说一下vue的nextTick
+## Day18
+
+1. 说一下vue的computed和watch的区别以及它们的应用场景
 
