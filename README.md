@@ -270,3 +270,8 @@ data.splice(0, 2) //Action=splice,args=0,2
 
 1. 说一下vue的computed和watch的区别以及它们的应用场景
 
+## Day19
+1. new做了啥
+2. 实现new
+3. 说下js怎么实现继承
+
