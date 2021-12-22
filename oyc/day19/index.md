@@ -41,7 +41,7 @@ n1.getInfo(); //oyc is 24
 使用原型,主要有三个关键点
 
 1. 在子的构造函数中通过call调用父的构造函数，实现继承父构造函数的效果
-2. 通过Object.create将子的原型与父的原型建立链接，也就是使得Son.prototype.__proto__ = Father.prototype,实现继承父类原型上的方法与属性
+2. 通过Object.create将子的原型与父的原型建立链接，也就是使得Son.prototype.\_\_proto\_\_ = Father.prototype,实现继承父类原型上的方法与属性
 3. 修正子的constructor，使其指向自己
 
 ```javascript
